@@ -27,32 +27,32 @@ header {
     padding: 1rem 2rem;
     margin: 0.8rem;
     border-radius: 25px;
+}
 
-    .search {
-        font-family: var(--primary-font);
-        display: flex;
-        align-items: center;
-        justify-content: end;
-    }
+.search {
+    font-family: var(--primary-font);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 
-    .search-icon {
-        margin-top: 0.4rem;
-        margin-right: 0.6rem;
-    }
+.search-icon {
+    margin-top: 0.4rem;
+    margin-right: 0.6rem;
+}
 
-    #search {
-        width: 100%;
-        max-width: 300px;
-        padding: 0.8rem;
-        border: none;
-        border-radius: 15px;
-        color: var(--primary-color-font);
-        background-color: #333;
-    }
+#search {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 15px;
+    color: var(--primary-color-font);
+    background-color: #333;
+}
 
-    #search::placeholder {
-        color: var(--secondary-color-font);
-    }
+#search::placeholder {
+    color: var(--secondary-color-font);
 }
 
 body {
@@ -97,7 +97,7 @@ body {
 }
 
 .card img {
-    width: 100%;
+    width: 350px;
     max-width: 100vh;
     height: 600px;
     border-radius: 5px;
