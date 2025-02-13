@@ -146,10 +146,12 @@ button {
 }
 
 .modal-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: var(--secondary-surface);
     color: var(--secondary-font);
+    gap: 1rem;
     border-radius: 20px;
     padding: 1rem;
     width: 100%;
@@ -175,7 +177,7 @@ button {
 
 .modal-container img {
     max-width: 100%;
-    height: 850px;
+    height: 100vhi;
     margin-top: 0.3rem;
     border-radius: 10px;
 }
@@ -195,6 +197,9 @@ button {
     border-radius: 18px;
 }
 
+.modal-content {
+    max-width: 43rem;
+}
 
 .modal-content-header h2 {
     margin-top: 1.4rem;
