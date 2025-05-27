@@ -3,7 +3,7 @@ const comics = [
         title: "Vampirella",
         issues: "40",
         year: "2010",
-        link: "pInk/vampirella.html",
+        link: "./pInk/vampirella.html",
         idiom: "Brazilian Portuguese",
         cover: "https://www.dynamite.com/images/Vampi01-cov-Ross-RareVariant.jpg"
     },
@@ -11,7 +11,7 @@ const comics = [
         title: "Incognito",
         issues: "06",
         year: "2008",
-        link: "pInk/incognito.html",
+        link: "./pInk/incognito.html",
         idiom: "Brazilian Portuguese",
         cover: "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2513399-01a_cropped.jpg"
     },
@@ -19,7 +19,7 @@ const comics = [
         title: "Fatale",
         issues: "24",
         year: "2012",
-        link: "pInk/fatale.html",
+        link: "./pInk/fatale.html",
         idiom: "Brazilian Portuguese",
         cover: "https://cdn.imagecomics.com/assets/i/releases/18505/fatale-1_ea3e77a5f9.jpg"
     },
@@ -27,7 +27,7 @@ const comics = [
         title: "Kick-Ass",
         issues: "08",
         year: "2008",
-        link: "pInk/cumming.html",
+        link: "./pInk/cumming.html",
         idiom: "Brazilian Portuguese",
         cover: "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2515095-01_red.jpg"
     },
@@ -35,7 +35,7 @@ const comics = [
         title: "The Walking Dead",
         issues: "193",
         year: "2003",
-        link: "pInk/cumming.html",
+        link: "./pInk/cumming.html",
         idiom: "Brazilian Portuguese",
         cover: "https://s3.amazonaws.com/comicgeeks/comics/covers/large-9340635.jpg?1729986063"
     },
