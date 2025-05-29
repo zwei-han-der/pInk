@@ -4,7 +4,7 @@ const comics = [
         issues: "40",
         year: "2010",
         link: "./pInk/vampirella.html",
-        idiom: "Brazilian Portuguese",
+        idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/images/Vampi01-cov-Ross-RareVariant.jpg"
     },
     {
@@ -12,7 +12,7 @@ const comics = [
         issues: "06",
         year: "2008",
         link: "./pInk/incognito.html",
-        idiom: "Brazilian Portuguese",
+        idiom: "Português Brasileiro",
         cover: "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2513399-01a_cropped.jpg"
     },
     {
@@ -20,7 +20,7 @@ const comics = [
         issues: "24",
         year: "2012",
         link: "./pInk/fatale.html",
-        idiom: "Brazilian Portuguese",
+        idiom: "Português Brasileiro",
         cover: "https://cdn.imagecomics.com/assets/i/releases/18505/fatale-1_ea3e77a5f9.jpg"
     },
     {
@@ -28,7 +28,7 @@ const comics = [
         issues: "08",
         year: "2008",
         link: "./pInk/kick-ass.html",
-        idiom: "Brazilian Portuguese",
+        idiom: "Português Brasileiro",
         cover: "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2515095-01_red.jpg"
     },
     {
@@ -36,7 +36,7 @@ const comics = [
         issues: "193",
         year: "2003",
         link: "./pInk/cumming.html",
-        idiom: "Brazilian Portuguese",
+        idiom: "Português Brasileiro",
         cover: "https://s3.amazonaws.com/comicgeeks/comics/covers/large-9340635.jpg?1729986063"
     },
 ];
@@ -52,8 +52,8 @@ function renderComics(comicsToRender) {
         card.innerHTML = `
             <a href="${comic.link}"><img src="${comic.cover}" alt="${comic.title} Cover"><a/>
             <div class="card-text">
-                <h2>${comic.title}</h2>
-                <p class="issue-year"><strong>Issues:</strong> ${comic.issues} | <strong>Release Year:</strong> ${comic.year} | <strong>Idiom:</strong> ${comic.idiom}</p>
+                <a href="${comic.link}"><h2>${comic.title}</h2><a/>
+                <a href="${comic.link}"><p class="issue-year"><strong>Edições:</strong> ${comic.issues} | <strong>Lançamento:</strong> ${comic.year} | <strong>Idioma:</strong> ${comic.idiom}</p><a/>
             </div>
         `;
         comicCardsContainer.appendChild(card);
