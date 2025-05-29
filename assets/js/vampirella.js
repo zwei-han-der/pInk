@@ -521,7 +521,6 @@ function openModal(comic) {
                 </div>
                 <div class="modal-content-text">
                     <h2>Details</h2> <hr>
-                    <p><strong>File Password:</strong> ${comic.password}</p>
                     <p><strong>Issue:</strong> ${comic.issues}</p>
                     <p><strong>Series:</strong> ${comic.series}</p>
                     <p><strong>Genre(s):</strong> ${comic.genres}</p>
