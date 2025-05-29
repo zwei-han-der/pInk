@@ -282,7 +282,7 @@ const comics = [
         size: "17.10 MB",
         series: "Vampirella (2010)",
         genres: "Horror, Superhero",
-        link: "https://1drv.ms/u/c/8db97f9fdacc4315/EdIyMjVzqMBKg22mjy6kwRgBl_GNTG-pM2szGpxM2eEjkA?e=DrIefQ",
+        link: "https://1drv.ms/u/c/8db97f9fdacc4315/EduGD7VwvqtGhO3blRWpib0BVIYYY06wH5IKbjh7BQj1OA?e=MdBcBD",
         idiom: "Brazilian Portuguese",
         cover: "https://www.dynamite.com/previews/C72513018406102211/Vampi22covRenaud.jpg",
         synopsis: "INQUISITION continues here! There is a revolution brewing in the depths of Vatican City, and Vampirella is caught in the crossfire! Who do you side with when you can't trust anyone?",
