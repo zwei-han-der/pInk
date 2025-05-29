@@ -27,7 +27,7 @@ const comics = [
         title: "Kick-Ass",
         issues: "08",
         year: "2008",
-        link: "./pInk/cumming.html",
+        link: "./pInk/kick-ass.html",
         idiom: "Brazilian Portuguese",
         cover: "https://comicvine.gamespot.com/a/uploads/scale_large/6/67663/2515095-01_red.jpg"
     },
