@@ -43,6 +43,11 @@ button {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+    color: var(--secondary-font);
+}
+
 .container {
     font-family: var(--font);
     background: var(--secondary-surface);
