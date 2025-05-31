@@ -249,7 +249,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EXXsvGm2ln9LhjB0WYh_NN0BrZf-RxWPS8k9smJid5ei6w?e=Z8x5ze",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406102011/Vampi20covRenaud.jpg",
-        synopsis: "It's a bloody showdown between Dracula, and the Vatican's paramilitary wing, Cestus Dei. Vlad has new tricks up his sleeves, alliances with old gods that make Order and Chaos tremble, and his plans of unholy conquest are on the verge of success. Of course, Vampirella might have something to say about that.",
+        synopsis: "É um confronto sangrento entre Drácula e a ala paramilitar do Vaticano, \"Cestus Dei\". Vlad tem novos truques na manga, alianças com deuses antigos que fazem a Ordem e o Caos tremerem, e seus planos de conquista profana estão à beira do sucesso. É claro que Vampirella pode ter algo a dizer sobre isso.",
     },
     {
         title: "Vampirella #21",
@@ -261,7 +261,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EdIyMjVzqMBKg22mjy6kwRgBl_GNTG-pM2szGpxM2eEjkA?e=DrIefQ",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406102111/Vampi21covRenaudBurst.jpg",
-        synopsis: "After the startling events of last issue, Vampirella's ready to put everything on the line in an attempt to save one soul and destroy another. Heroes and villains alike are playing toward their own endgame, and the cards are turning with a deadly quickness. We're not kidding when we say that BIG changes are coming, and it all starts here with Part 1 of INQUISITION!",
+        synopsis: "Após os eventos surpreendentes da última edição, Vampirella está pronta para colocar tudo em risco em uma tentativa de salvar uma alma e destruir outra. Tanto os heróis quanto os vilões estão jogando para o seu próprio fim, e as cartas estão virando com uma rapidez mortal. Não estamos brincando quando dizemos que GRANDES mudanças estão chegando, e tudo começa aqui com a Parte 1 de INQUISIÇÃO!",
     },
     {
         title: "Vampirella Annual #2",
@@ -273,7 +273,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/Ea6S_RoDBIVEr49KKY__2tEBpFTlTfaVKgd7MZH-SOK0xQ?e=FIm35N",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018407800211/VampiAnn02CovLinsner.jpg",
-        synopsis: "An eager young fanboy wants to be Vampi's new partner, and against her better judgment, she goes with him to a truly unsettling scene: a little town holding a convention for a popular series of vampire books and movies. As the town goes to absurd lengths to profit from fans, a gang of different ",
+        synopsis: "Um jovem e ávido fã quer ser o novo parceiro de Vampi e, contra seu bom senso, ela vai com ele a uma cena realmente perturbadora: uma pequena cidade que realiza uma convenção para uma série popular de livros e filmes de vampiros. Enquanto a cidade se esforça absurdamente para lucrar com os fãs.",
     },
     {
         title: "Vampirella #22",
@@ -285,7 +285,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EduGD7VwvqtGhO3blRWpib0BVIYYY06wH5IKbjh7BQj1OA?e=MdBcBD",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406102211/Vampi22covRenaud.jpg",
-        synopsis: "INQUISITION continues here! There is a revolution brewing in the depths of Vatican City, and Vampirella is caught in the crossfire! Who do you side with when you can't trust anyone?",
+        synopsis: "INQUISIÇÃO continua aqui! Há uma revolução se formando nas profundezas da Cidade do Vaticano, e Vampirella é pega no fogo cruzado! De que lado você fica quando não pode confiar em ninguém?",
     },
     {
         title: "Vampirella #23",
@@ -297,7 +297,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/ESo3gkgzHnlMpjOlqKIS3UkBS6s6b9XFVBBaVpH-GxqXmg?e=3s7Vpm",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406102311/Vampi23covRenaud.jpg",
-        synopsis: "The 'INQUISITION' storyline reaches its dramatic conclusion in this issue! Vampirella must defend her recent actions and prove that she hasn't been corrupted by the influence of Chaos...before her most powerful enemy drives her to madness! The balance of the universe rests upon Vampirella's shoulders, and the weight may be too much for her to bear!",
+        synopsis: "A história de “INQUISIÇÃO” chega à sua dramática conclusão nesta edição! Vampirella precisa defender suas ações recentes e provar que não foi corrompida pela influência do Caos... antes que seu inimigo mais poderoso a leve à loucura! O equilíbrio do universo está sobre os ombros de Vampirella, e o peso pode ser demais para ela suportar!",
     },
     {
         title: "Vampirella #24",
@@ -309,7 +309,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EbILuzws6sBOqhzSDxTX88QBtFfEmu5yvi8Qn1hhaW1J5w?e=5JeAth",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406102411/Vampi24covRenaud.jpg",
-        synopsis: "The battle lines have been drawn! Dracula's horrific soldiers - and his new lieutenant - are on the offensive, but they'll have to get past Vampirella and her allies! The two-part HELL ON EARTH epic starts here! (And be sure to check out PANTHA #5 for even more of the story!)",
+        synopsis: "As linhas de batalha foram traçadas! Os terríveis soldados de Drácula - e seu novo tenente - estão na ofensiva, mas eles terão que passar por Vampirella e seus aliados! O épico INFERNO NA TERRA, em duas partes, começa aqui! ",
     },
     {
         title: "Vampirella #25",
@@ -321,7 +321,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EQ22iXEX0dxJtf0hWfnRnHQB24PLiUc096o4siMfhMYaAg?e=K7CE5N",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406102511/Vampi25covRenaud.jpg",
-        synopsis: "HELL ON EARTH concludes here, bringing the second year of Dynamite's Vampirella series to a close! The two most powerful vampires on Earth are clashing in a fury of blood and fire, and the balance of Chaos and Order is at stake!",
+        synopsis: "INFERNO NA TERRA termina aqui, encerrando o segundo ano da série Vampirella da Dynamite! Os dois vampiros mais poderosos da Terra estão se enfrentando em uma fúria de sangue e fogo, e o equilíbrio do Caos e da Ordem está em jogo!",
     },
     {
         title: "Vampirella #26",
@@ -333,7 +333,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/ET8SjQ2MS75IkLxuc0-WYjcBt6-oh3nc6bpvSL1M5tkdaw?e=InFDGb",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406102611/Vampi26covParrillo.jpg",
-        synopsis: "The third year of Dynamite's Vampirella starts here! There's a new dawn on Earth, and a new beginning for Vampirella in the aftermath of war. Who are Mother Rowan and the Sleepless Boys, and why have they called for our heroine's help? A Dynamite Done-In-One, perfect for longtime fans and new readers!",
+        synopsis: "O terceiro ano da Vampirella da Dynamite começa aqui! Há um novo amanhecer na Terra e um novo começo para Vampirella após a guerra. Quem são Mother Rowan e os Sleepless Boys, e por que eles pediram a ajuda de nossa heroína? Um livro da Dynamite, perfeito para fãs de longa data e novos leitores!",
     },
     {
         title: "Vampirella #27",
@@ -345,7 +345,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/Eb-zZ7nlWmxNs9TBhhKz1c4BGJa03TJm9iUppzkABdjh_A?e=tAcIDj",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406102711/Vampi27covRenaud.jpg",
-        synopsis: "The 2-part 'Theories of Relativity' story begins here! Secrets - and maybe a little blood - are certain to be spilled when Vampirella finds herself in the midst of an unexpected family reunion. The revelations don't stop there - we're also pulling back the curtain to reveal the origin stories of Criswell and The Conjuress! How are they connected, and what does their bond have to do with Vampirella's mother, Lilith?",
+        synopsis: "A história em duas partes \“Teorias da Relatividade\" começa aqui! Segredos - e talvez um pouco de sangue - certamente serão derramados quando Vampirella se encontrar no meio de uma inesperada reunião de família. As revelações não param por aí, também estamos puxando a cortina para revelar as histórias de origem de Criswell e The Conjuress! Como eles estão ligados e o que o vínculo deles tem a ver com a mãe de Vampirella, Lilith?",
     },
     {
         title: "Vampirella #28",
@@ -357,7 +357,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/ERSK91Q_lHBCm7Cn5bU1wd0B3t-gF_Nn1bDdmrjyOWcAtg?e=onc3m3",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406102811/Vampi28covParrillo.jpg",
-        synopsis: "'Theories of Relativity' (Part 2 of 2): Vampirella's mother Lilith claims she's not the same evil manipulator she used to be, and she's willing to go to great lengths...er, depths...to prove it! Also in this issue: The origin stories of Criswell and The Conjuress are concluded!",
+        synopsis: "\“Teorias da Relatividade\” (Parte 2 de 2): A mãe de Vampirella, Lilith, afirma que não é a mesma manipuladora maligna que costumava ser, e está disposta a ir a grandes distâncias... ou seja, profundidades... para provar isso! Também nesta edição: As histórias de origem de Criswell e The Conjuress são concluídas!",
     },
     {
         title: "Vampirella #29",
@@ -369,7 +369,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EbL-ahZwVmVFr3iz56lORNcBA0zY9v7HG_Gp7eL7qvbn2Q?e=UgQxzE",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406102911/Vampi29covRenaud.jpg",
-        synopsis: "Set The Controls For The Heart Of The Sun (Part 1 of 3) - After being scattered around for a bit, Team Vampirella is reunited with new purpose. It's a good thing, too, because the team will have their hands full fighting a coven of witches in the present, while Vampirella and Criswell are otherwise occupied. And by 'occupied', we mean their minds have been projected 100 years into the future!",
+        synopsis: "\“Prepare os controles para o coração do sol\" (Parte 1 de 3) - Depois de ficar um pouco dispersa, a Equipe Vampirella está reunida com um novo propósito. Isso também é bom, pois a equipe terá muito trabalho para combater um grupo de bruxas no presente, enquanto Vampirella e Criswell estão ocupados. E por \“ocupados\”, queremos dizer que suas mentes foram projetadas 100 anos no futuro!",
     },
     {
         title: "Vampirella #30",
@@ -381,7 +381,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/Ec3kLeHj6y9Lq7z8dFUydgUBXJyMwoBJzrZ7o8yd3-yhuQ?e=gAS6c5",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406103011/Vampi30covParrillo.jpg",
-        synopsis: "Vampirella and Criswell are stranded one hundred years in the future, unraveling a mystery of apocalyptic proportions. Meanwhile, in the present, their allies struggle against a deadly coven of witches whose terrible spells threaten to damage all time and reality! Variant: Renaud cover. Consult local retailer for availability.",
+        synopsis: "Vampirella e Criswell estão presos cem anos no futuro, desvendando um mistério de proporções apocalípticas. Enquanto isso, no presente, seus aliados lutam contra um grupo mortal de bruxas cujos terríveis feitiços ameaçam danificar todo o tempo e a realidade! Variante: Capa de Renaud. Consulte o varejista local para saber a disponibilidade.",
     },
     {
         title: "Vampirella #31",
@@ -393,7 +393,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EcVjmYSo40dBjczaMo9xUUoBImb_kQdT-o3kYiBp3cpETQ?e=AKVu2M",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406103111/Vampi31covParrillo.jpg",
-        synopsis: "It's been said that you should never know your own future...but what if you do? Decisions will be made, fates will be met, and a kingdom will rise! But will Vampirella have the strength to bear the painful price of victory?",
+        synopsis: "Dizem que você nunca deve saber seu próprio futuro... mas e se você souber? Decisões serão tomadas, destinos serão cumpridos e um reino se erguerá! Mas será que Vampirella terá forças para suportar o doloroso preço da vitória?",
     },
     {
         title: "Vampirella #32",
@@ -405,7 +405,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EZzVK91LzhZGmeQx8GjzgHUBFroR-do-ws0fwKlyHntLdQ?e=x2TR5A",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406103211/Vampi32covNeves.jpg",
-        synopsis: "Vampirella finds terror in the heart of Cote de Soleil, an island nation with dark Voudon secrets... and that's not all! A classic Vampi adversary may be hiding in the shadows, and waiting for the perfect moment to strike!",
+        synopsis: "Vampirella encontra o terror no coração de Cote de Soleil, uma nação insular com segredos sombrios de Voudon... e isso não é tudo! Um adversário clássico dos vampiros pode estar se escondendo nas sombras e esperando o momento perfeito para atacar!",
     },
     {
         title: "Vampirella #33",
@@ -417,7 +417,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EZnaH3f5ztNOqMSEF-kJCjEBzVZ3u3hdMvUlbbpmmqV7yA?e=a2GlB1",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406103311/Vampi33covParrillo.jpg",
-        synopsis: "On the island of Cote de Soleil, an old, dead evil has returned to reclaim long-lost power...and that's not the only sinister thing slithering around. Transformation is the name of the game when Vampirella and voodoo have a rumble in the jungle!",
+        synopsis: "Na ilha de Cote de Soleil, um mal antigo e morto retornou para recuperar um poder há muito perdido... e essa não é a única coisa sinistra que está rastejando por aí. A transformação é o nome do jogo quando Vampirella e o vodu se enfrentam na selva!",
     },
     {
         title: "Vampirella #34",
@@ -429,7 +429,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EYPdWaNShwFPjI81yMe4__kB4vqZhfAybjNSY2JwfJmfCA?e=zLpAG2",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406103411/Vampi34covParrillo.jpg",
-        synopsis: "Having glimpsed a possible future, Vampirella makes a major choice for herself: she's going to become the Patron Saint of Monsters, and start by constructing a place of refuge for the weird and fearful. The road to Hell is paved with good intentions...",
+        synopsis: "Tendo vislumbrado um possível futuro, Vampirella faz uma grande escolha para si mesma: ela se tornará a Santa Padroeira dos Monstros e começará construindo um local de refúgio para os estranhos e medrosos. O caminho para o inferno é pavimentado com boas intenções...",
     },
     {
         title: "Vampirella #35",
@@ -441,7 +441,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/EUhBfHrnlwNOpfOMa2dQ_kAB8P3NL9AB9891__ihv_oGGg?e=p3ntiU",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406103511/Vampi35covParrillo.jpg",
-        synopsis: "She Sells Sanctuary' (Part 2 of 2) Following a surprise attack by a new enemy, Vampirella makes a shocking decision. Who is Sister Midnight, and why does she want Vampirella dead? How far will our heroine go to defend her vision of a better future? And where will Adam Van Helsing stand in the aftermath? Answers await within...",
+        synopsis: "\"Ela Vende Santuário\” (Parte 2 de 2) Após um ataque surpresa de um novo inimigo, Vampirella toma uma decisão chocante. Quem é a Irmã Meia-Noite e por que ela quer a Vampirella morta? Até onde nossa heroína irá para defender sua visão de um futuro melhor? E qual será a posição de Adam Van Helsing depois disso? As respostas estão à sua espera...",
     },
     {
         title: "Vampirella #36",
@@ -453,7 +453,7 @@ const comics = [
         link: "https://1drv.ms/u/c/8db97f9fdacc4315/Eb3XvmaFSVNJoKYh7QJPxckBAqEfb0BaO_UYnq4yK3Eawg?e=ekfnjD",
         idiom: "Português Brasileiro",
         cover: "https://www.dynamite.com/previews/C72513018406103611/Vampi36covParrillo.jpg",
-        synopsis: "Vampirella's new leadership role in the monster world has been as much a catalyst for division as it has for unity. Even with her recent victories, there are some who believe she's heading down the wrong path...and Adam Van Helsing has decided that it's time to let her know. Honesty is the key to a healthy relationship, right?",
+        synopsis: "O novo papel de liderança de Vampirella no mundo dos monstros tem sido tanto um catalisador de divisão quanto de união. Mesmo com suas recentes vitórias, há quem acredite que ela está seguindo o caminho errado... e Adam Van Helsing decidiu que é hora de informá-la. A honestidade é a chave para um relacionamento saudável, certo?",
     },
     {
         title: "Vampirella #37",
