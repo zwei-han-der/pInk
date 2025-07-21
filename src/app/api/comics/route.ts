@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient, Prisma } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -24,7 +24,7 @@ export async function GET(_request: NextRequest) {
         const year = searchParams.get("year");
         const title = searchParams.get("title");
 
-        const where = {} as any;
+        const where: Record<string, unknown> = {};
 
         if (author) {
             where.author = {
