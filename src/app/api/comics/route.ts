@@ -24,7 +24,7 @@ export async function GET(_request: NextRequest) {
         const year = searchParams.get("year");
         const title = searchParams.get("title");
 
-        const where: Prisma.ComicWhereInput = {};
+        const where = {} as any;
 
         if (author) {
             where.author = {
