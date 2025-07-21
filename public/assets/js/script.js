@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/comics';
+const API_URL = '/api/comics';
 const LOADING_TIMEOUT = 10000;
 
 let allComics = [];
