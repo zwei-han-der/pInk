@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Prisma } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-// Função para adicionar headers CORS
 function addCorsHeaders(response: NextResponse) {
     response.headers.set('Access-Control-Allow-Origin', '*');
     response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
@@ -11,22 +10,21 @@ function addCorsHeaders(response: NextResponse) {
     return response;
 }
 
-// Método OPTIONS para CORS preflight
 export async function OPTIONS(request: NextRequest) {
     const response = new NextResponse(null, { status: 200 });
     return addCorsHeaders(response);
 }
 
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
     try {
-        const { searchParams } = new URL(request.url);
+        const { searchParams } = new URL(_request.url);
 
         const author = searchParams.get("author");
         const publisher = searchParams.get("publisher");
         const year = searchParams.get("year");
         const title = searchParams.get("title");
 
-        const where: any = {};
+        const where: Prisma.ComicWhereInput = {};
 
         if (author) {
             where.author = {
@@ -35,9 +33,9 @@ export async function GET(request: NextRequest) {
                         name: {
                             contains: author,
                             mode: 'insensitive',
-                        }
-                    }
-                }
+                        },
+                    },
+                },
             };
         }
         if (publisher) {
@@ -45,7 +43,7 @@ export async function GET(request: NextRequest) {
                 name: {
                     contains: publisher,
                     mode: 'insensitive',
-                }
+                },
             };
         }
         if (year) {

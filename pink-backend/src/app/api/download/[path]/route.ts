@@ -3,11 +3,11 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 export async function GET(
-    request: NextRequest,
-    { params }: { params: { path: string[] } }
+    _request: NextRequest,
+    context: { params: { path: string[] } }
 ) {
     try {
-        const filePath = path.join(process.cwd(), 'public', 'uploads', ...params.path);
+        const filePath = path.join(process.cwd(), 'public', 'uploads', ...context.params.path);
         
         // Verificar se o arquivo existe
         try {

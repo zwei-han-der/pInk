@@ -15,11 +15,9 @@ export async function OPTIONS(request: NextRequest) {
     return addCorsHeaders(response);
 }
 
-type RouteContext = { params: { id: string } };
-
 export async function GET(
-    request: NextRequest,
-    context: RouteContext
+    _request: NextRequest,
+    context: { params: { id: string } }
 ) {
     const { params } = context;
     try {
@@ -47,7 +45,7 @@ export async function GET(
 
         return addCorsHeaders(response);
 
-    } catch (error) {
+    } catch {
         const response = NextResponse.json(
             { success: false, error: 'Erro interno do servidor' },
             { status: 500 }

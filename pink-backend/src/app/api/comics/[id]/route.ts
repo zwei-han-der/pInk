@@ -18,11 +18,11 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function GET(
-    request: NextRequest,
-    { params }: { params: { id: string } }
+    _request: NextRequest,
+    context: { params: { id: string } }
 ) {
     try {
-        const id = parseInt(params.id);
+        const id = parseInt(context.params.id);
 
         if (isNaN(id)) {
             const response = NextResponse.json(
