@@ -47,7 +47,7 @@ function openModal(comic) {
                 <span class="close">&times;</span>
                 <div class="modal-content-header">
                     <h2>${comic.title}</h2>
-                    <a href="${comic.link}" target="_blank">Download (${comic.size})</a>
+                    <a href="${comic.link}" download target="_blank">Download (${comic.size})</a>
                 </div>
                 <div class="modal-content-synopsis">
                     <h2>Synopsis</h2> <hr>
