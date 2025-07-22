@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
+let prisma: PrismaClient;
+if (!globalForPrisma.prisma) {
+  prisma = new PrismaClient();
+  if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+} else {
+  prisma = globalForPrisma.prisma;
+}
 
 function addCorsHeaders(response: NextResponse) {
     response.headers.set('Access-Control-Allow-Origin', '*');
@@ -15,41 +22,25 @@ export async function OPTIONS(request: NextRequest) {
     return addCorsHeaders(response);
 }
 
-export async function GET(
-    _request: NextRequest,
-    context: { params: { id: string } }
-) {
-    const { params } = context;
+export async function GET(_request: Request, context: { params: { id: string } }) {
     try {
-        const comicId = parseInt(params.id);
-
+        const comicId = parseInt(context.params.id);
         if (isNaN(comicId)) {
-            const response = NextResponse.json(
-                { success: false, error: 'ID inválido' },
-                { status: 400 }
-            );
+            const response = NextResponse.json({ success: false, error: 'ID inválido' }, { status: 400 });
             return addCorsHeaders(response);
         }
-
         const issues = await prisma.issue.findMany({
             where: { comicId },
             include: { idiom: true },
             orderBy: { issueNumber: 'asc' }
         });
-
-        const response = NextResponse.json({
-            success: true,
-            data: issues,
-            count: issues.length
-        });
-
+        const response = NextResponse.json({ success: true, data: issues, count: issues.length });
         return addCorsHeaders(response);
-
-    } catch {
-        const response = NextResponse.json(
-            { success: false, error: 'Erro interno do servidor' },
-            { status: 500 }
-        );
+    } catch (error) {
+        const response = NextResponse.json({
+            success: false,
+            error: error instanceof Error ? error.message : 'Erro desconhecido'
+        }, { status: 500 });
         return addCorsHeaders(response);
     }
 }

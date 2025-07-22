@@ -1,7 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient } from '@prisma/client';
 
-const prisma = new PrismaClient();
+const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
+let prisma: PrismaClient;
+if (!globalForPrisma.prisma) {
+  prisma = new PrismaClient();
+  if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+} else {
+  prisma = globalForPrisma.prisma;
+}
 
 function addCorsHeaders(response: NextResponse) {
     response.headers.set('Access-Control-Allow-Origin', '*');
@@ -15,49 +22,9 @@ export async function OPTIONS(request: NextRequest) {
     return addCorsHeaders(response);
 }
 
-export async function GET(_request: NextRequest) {
+export async function GET() {
     try {
-        const { searchParams } = new URL(_request.url);
-
-        const author = searchParams.get("author");
-        const publisher = searchParams.get("publisher");
-        const year = searchParams.get("year");
-        const title = searchParams.get("title");
-
-        const where: Record<string, unknown> = {};
-
-        if (author) {
-            where.author = {
-                some: {
-                    author: {
-                        name: {
-                            contains: author,
-                            mode: 'insensitive',
-                        },
-                    },
-                },
-            };
-        }
-        if (publisher) {
-            where.publisher = {
-                name: {
-                    contains: publisher,
-                    mode: 'insensitive',
-                },
-            };
-        }
-        if (year) {
-            where.year = parseInt(year);
-        }
-        if (title) {
-            where.title = {
-                contains: title,
-                mode: 'insensitive',
-            };
-        }
-
         const comics = await prisma.comic.findMany({
-            where,
             include: {
                 idiom: true,
                 publisher: true,
@@ -79,14 +46,11 @@ export async function GET(_request: NextRequest) {
         });
 
         return addCorsHeaders(response);
-
     } catch (error) {
-        console.error('Erro ao buscar quadrinhos:', error);
         const response = NextResponse.json({
             success: false,
-            error: 'Erro ao buscar quadrinhos'},
-            { status: 500 }
-        );
+            error: error instanceof Error ? error.message : 'Erro desconhecido'
+        }, { status: 500 });
         return addCorsHeaders(response);
     }
 }
