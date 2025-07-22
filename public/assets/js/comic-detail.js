@@ -99,14 +99,14 @@ function renderIssues() {
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <a href="${getSafeLink(issue.link)}" target="_blank">
+            <a href="${getSafeLink(issue.link)}">
                 <img src="${issue.cover}" alt="${issue.title} Cover">
             </a>
             <div class="card-text">
-                <a href="${getSafeLink(issue.link)}" target="_blank">
+                <a href="${getSafeLink(issue.link)}">
                     <h2>${issue.title}</h2>
                 </a>
-                <a href="${getSafeLink(issue.link)}" target="_blank">
+                <a href="${getSafeLink(issue.link)}">
                     <p class="issue-year">
                         <strong>Edição:</strong> ${issue.issueNumber} | 
                         <strong>Ano:</strong> ${issue.year} | 
