@@ -99,14 +99,14 @@ function renderIssues() {
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <a href="${issue.link}" target="_blank">
+            <a href="${getSafeLink(issue.link)}" target="_blank">
                 <img src="${issue.cover}" alt="${issue.title} Cover">
             </a>
             <div class="card-text">
-                <a href="${issue.link}" target="_blank">
+                <a href="${getSafeLink(issue.link)}" target="_blank">
                     <h2>${issue.title}</h2>
                 </a>
-                <a href="${issue.link}" target="_blank">
+                <a href="${getSafeLink(issue.link)}" target="_blank">
                     <p class="issue-year">
                         <strong>Edição:</strong> ${issue.issueNumber} | 
                         <strong>Ano:</strong> ${issue.year} | 
@@ -120,7 +120,12 @@ function renderIssues() {
     });
 }
 
-
+function getSafeLink(link) {
+  if (!link) return '#';
+  if (link.startsWith('http')) return link;
+  if (!link.startsWith('/')) return '/' + link;
+  return link;
+}
 
 function setupSearch() {
     if (!searchInput) return;
