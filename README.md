@@ -15,4 +15,4 @@ Este projeto é um site de quadrinhos desenvolvido com Next.js, Prisma e fronten
 
 ---
 
-Desenvolvido por Gustavo.
+Desenvolvido por Zweihander.
