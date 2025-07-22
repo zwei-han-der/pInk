@@ -308,9 +308,6 @@ a {
 }
 
 
-/* ===== RESPONSIVIDADE COMPLETA ===== */
-
-/* Breakpoint: Desktop Grande (1440px+) */
 @media screen and (min-width: 1440px) {
     .cards {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -333,7 +330,6 @@ a {
     }
 }
 
-/* Breakpoint: Desktop Médio (1024px - 1439px) */
 @media screen and (max-width: 1439px) and (min-width: 1024px) {
     .cards {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -354,7 +350,6 @@ a {
     }
 }
 
-/* Breakpoint: Tablet Grande (768px - 1023px) */
 @media screen and (max-width: 1023px) and (min-width: 768px) {
     header {
         grid-template-columns: 1fr;
@@ -622,7 +617,6 @@ a {
     }
 }
 
-/* Breakpoint: Mobile Grande (480px - 599px) */
 @media screen and (max-width: 599px) and (min-width: 480px) {
     header {
         grid-template-columns: 1fr;
@@ -762,7 +756,6 @@ a {
     }
 }
 
-/* Breakpoint: Mobile Pequeno (320px - 479px) */
 @media screen and (max-width: 479px) {
     header {
         grid-template-columns: 1fr;
@@ -904,7 +897,6 @@ a {
     }
 }
 
-/* Breakpoint: Mobile Muito Pequeno (até 319px) */
 @media screen and (max-width: 319px) {
     header {
         padding: 0.5rem;
@@ -1006,9 +998,6 @@ a {
     }
 }
 
-/* ===== MELHORIAS DE ACESSIBILIDADE ===== */
-
-/* Foco melhorado para navegação por teclado */
 .card:focus-within,
 #search:focus,
 .modal-content a:focus {
@@ -1016,13 +1005,11 @@ a {
     outline-offset: 2px;
 }
 
-/* Melhor contraste para texto */
 .card p {
     color: var(--secondary-font);
     opacity: 0.9;
 }
 
-/* Animações suaves para transições */
 .card,
 .modal-container,
 .modal-content-header,
@@ -1031,7 +1018,6 @@ a {
     transition: all 0.3s ease;
 }
 
-/* Melhorias específicas para o modal */
 .modal-container {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -1092,7 +1078,6 @@ a {
     transform: translateY(-2px);
 }
 
-/* Melhor legibilidade em telas pequenas */
 @media screen and (max-width: 767px) {
     .card-text {
         line-height: 1.4;

@@ -108,9 +108,7 @@ function renderIssues() {
                 </a>
                 <a href="${getSafeLink(issue.link)}">
                     <p class="issue-year">
-                        <strong>Edição:</strong> ${issue.issueNumber} | 
                         <strong>Ano:</strong> ${issue.year} | 
-                        <strong>Tamanho:</strong> ${issue.size} | 
                         <strong>Idioma:</strong> ${idiomName}
                     </p>
                 </a>
