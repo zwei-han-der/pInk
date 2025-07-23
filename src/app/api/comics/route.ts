@@ -1,14 +1,5 @@
-import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from '@prisma/client';
-
-const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient };
-let prisma: PrismaClient;
-if (!globalForPrisma.prisma) {
-  prisma = new PrismaClient();
-  if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
-} else {
-  prisma = globalForPrisma.prisma;
-}
+import { NextResponse } from "next/server";
+import { prisma } from '@/lib/db';
 
 function addCorsHeaders(response: NextResponse) {
     response.headers.set('Access-Control-Allow-Origin', '*');
@@ -17,7 +8,7 @@ function addCorsHeaders(response: NextResponse) {
     return response;
 }
 
-export async function OPTIONS(request: NextRequest) {
+export async function OPTIONS() {
     const response = new NextResponse(null, { status: 200 });
     return addCorsHeaders(response);
 }
