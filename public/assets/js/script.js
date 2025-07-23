@@ -134,7 +134,7 @@ async function initializeComics() {
         if (apiSuccess) {
             return;
         }
-    } catch (error) {
+    } catch {
         console.log('⚠️ API falhou, tentando fallback...');
     }
     

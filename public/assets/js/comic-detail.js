@@ -99,14 +99,14 @@ function renderIssues() {
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <a href="${getSafeLink(issue.link)}">
+            <a href="#" class="modal-trigger">
                 <img src="${issue.cover}" alt="${issue.title} Cover">
             </a>
             <div class="card-text">
-                <a href="${getSafeLink(issue.link)}">
+                <a href="#" class="modal-trigger">
                     <h2>${issue.title}</h2>
                 </a>
-                <a href="${getSafeLink(issue.link)}">
+                <a href="#" class="modal-trigger">
                     <p class="issue-year">
                         <strong>Ano:</strong> ${issue.year} | 
                         <strong>Idioma:</strong> ${idiomName}
@@ -114,7 +114,59 @@ function renderIssues() {
                 </a>
             </div>
         `;
+        // Adiciona evento para abrir modal em todos os elementos com a classe modal-trigger
+        card.querySelectorAll('.modal-trigger').forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal(issue);
+            });
+        });
         issuesListContainer.appendChild(card);
+    });
+}
+
+function openModal(issue) {
+    const idiomName = issue.idiom?.name || issue.idiom || 'N/A';
+    const modal = document.createElement('div');
+    modal.className = 'modal';
+    modal.innerHTML = `
+        <div class="modal-container">
+            <div class="modal-img">
+                <img src="${issue.cover}" alt="${issue.title} Cover">
+            </div>
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-content-header">
+                    <h2>${issue.title}</h2>
+                    <a href="${getSafeLink(issue.link)}" download target="_blank">Download</a>
+                </div>
+                <div class="modal-content-synopsis">
+                    <h2>Sinopse</h2> <hr>
+                    <p>${issue.synopsis || 'Sem sinopse disponível.'}</p>
+                </div>
+                <div class="modal-content-text">
+                    <h2>Detalhes</h2> <hr>
+                    <p><strong>Edição:</strong> ${issue.issueNumber || ''}</p>
+                    <p><strong>Série:</strong> ${issue.series || ''}</p>
+                    <p><strong>Gênero(s):</strong> ${issue.genres || ''}</p>
+                    <p><strong>Lançamento:</strong> ${issue.year || ''}</p>
+                    <p><strong>Idioma:</strong> ${idiomName}</p>
+                </div>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    const closeBtn = modal.querySelector('.close');
+    closeBtn.addEventListener('click', () => {
+        document.body.removeChild(modal);
+    });
+
+    window.addEventListener('click', function handler(event) {
+        if (event.target === modal) {
+            document.body.removeChild(modal);
+            window.removeEventListener('click', handler);
+        }
     });
 }
 
