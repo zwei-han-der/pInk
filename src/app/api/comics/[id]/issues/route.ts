@@ -17,7 +17,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
             include: { idiom: true },
             orderBy: { issueNumber: 'asc' }
         });
-        return createSuccessResponse({ issues, count: issues.length });
+        return createSuccessResponse(issues);
     } catch (error) {
         return createErrorResponse(error);
     }
