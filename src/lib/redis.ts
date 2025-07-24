@@ -10,10 +10,7 @@ export const redis = new Redis({
   token: process.env.UPSTASH_REDIS_REST_TOKEN,
 })
 
-export const cacheMiddleware = async (
-  params: Prisma.MiddlewareParams,
-  next: (params: Prisma.MiddlewareParams) => Promise<unknown>
-) => {
+export const cacheMiddleware: Prisma.Middleware = async (params, next) => {
   const isMutation = !['findUnique', 'findFirst', 'findMany'].includes(params.action);
   
   if (isMutation) {
@@ -26,7 +23,7 @@ export const cacheMiddleware = async (
     }
   }
 
-  if (params.action === 'findMany' && !params.args.where || params.args?.include?.author?.include?.author) {
+  if (params.action === 'findMany' && !params.args.where) {
     return next(params);
   }
 
@@ -38,13 +35,15 @@ export const cacheMiddleware = async (
       try {
         return JSON.parse(cached as string);
       } catch {
-        
+        // Ignora cache inválido
       }
-}
+    }
 
     const result = await next(params);
-    if (result && typeof result === 'object') {
-      await Promise.all((await redis.keys(`${params.model}:*`)).map(key => redis.del(key)));
+    if (result) {
+      await redis.set(key, JSON.stringify(result), { 
+        ex: params.action === 'findUnique' ? 3600 : 1800 
+      });
     }
     return result;
   } catch {

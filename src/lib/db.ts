@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { cacheMiddleware } from './redis'; // Importação direta
+import { cacheMiddleware } from './redis';
 
 declare global {
   var prisma: PrismaClient | undefined;
