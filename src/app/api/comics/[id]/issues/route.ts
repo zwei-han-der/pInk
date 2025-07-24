@@ -13,9 +13,12 @@ export async function OPTIONS() {
     return addCorsHeaders(response);
 }
 
-export async function GET(_request: Request, context: { params: { id: string } }) {
+export async function GET(
+  _request: Request,
+  { params }: { params: { id: string } }
+) {
     try {
-        const comicId = parseInt(context.params.id);
+        const comicId = parseInt(params.id);
         if (isNaN(comicId)) {
             const response = NextResponse.json({ success: false, error: 'ID inválido' }, { status: 400 });
             return addCorsHeaders(response);
