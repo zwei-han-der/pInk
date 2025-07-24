@@ -61,7 +61,7 @@ async function loadComicData() {
     try {
         await loadComicIssues(comicId);
         setupSearch();
-    } catch (error) {
+    } catch {
         showErrorInIssues('Erro ao carregar dados do quadrinho');
     }
 }
