@@ -5,9 +5,10 @@ export async function OPTIONS() {
     return createOptionsResponse();
 }
 
-export async function GET(_request: Request, context: { params: { id: string } }) {
+export async function GET(_request: Request, { params }: { params: Promise<{ id: string }> }) {
     try {
-        const comicId = parseInt(context.params.id);
+        const { id } = await params;
+        const comicId = parseInt(id);
         if (isNaN(comicId)) {
             return createErrorResponse('ID inválido', 400);
         }
