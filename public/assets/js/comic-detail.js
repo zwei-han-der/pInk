@@ -109,8 +109,7 @@ function renderIssues() {
                 <a href="#" class="modal-trigger">
                     <p class="issue-year">
                         <strong>Ano:</strong> ${issue.year} | 
-                        <strong>Idioma:</strong> ${idiomName} |
-                        <strong>Tamanho:</strong> ${issue.size || 'N/A'}
+                        <strong>Idioma:</strong> ${idiomName}
                     </p>
                 </a>
             </div>
@@ -139,7 +138,7 @@ function openModal(issue) {
                 <span class="close">&times;</span>
                 <div class="modal-content-header">
                     <h2>${issue.title}</h2>
-                    <a href="${getSafeLink(issue.link)}" download target="_blank">Download (${issue.size})</a>
+                    <a href="${getSafeLink(issue.link)}" download target="_blank">Download</a>
                 </div>
                 <div class="modal-content-synopsis">
                     <h2>Sinopse</h2> <hr>
@@ -147,11 +146,11 @@ function openModal(issue) {
                 </div>
                 <div class="modal-content-text">
                     <h2>Detalhes</h2> <hr>
+                    <p><strong>Edição:</strong> ${issue.issueNumber || ''}</p>
                     <p><strong>Série:</strong> ${issue.series || ''}</p>
                     <p><strong>Gênero(s):</strong> ${issue.genres || ''}</p>
                     <p><strong>Lançamento:</strong> ${issue.year || ''}</p>
                     <p><strong>Idioma:</strong> ${idiomName}</p>
-                    <p><strong>Tamanho:</strong> ${issue.size || ''}</p>
                 </div>
             </div>
         </div>
