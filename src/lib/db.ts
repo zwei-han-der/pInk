@@ -1,3 +1,4 @@
+
 import { PrismaClient } from '@prisma/client';
 type CacheMiddleware = Parameters<PrismaClient['$use']>[0] | undefined;
 let cacheMiddleware: CacheMiddleware = undefined;
