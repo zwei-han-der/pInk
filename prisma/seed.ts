@@ -1,4 +1,4 @@
-import { prisma } from '../src/lib/db';
+import prisma from '../src/lib/db';
 
 async function main() {
     console.log("🌱 Seeding banco de dados...");
