@@ -1,46 +1,71 @@
-import { Redis } from '@upstash/redis'
-import type { Prisma } from '@prisma/client';
+import { Redis } from "@upstash/redis"
 
 if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
-  throw new Error('Redis credentials not found in environment variables')
+  // Do not throw error in the file, check for redis availability in the files that use it
+  // throw new Error('Redis credentials not found in environment variables')
+  console.warn("Redis credentials not found in environment variables. Caching will be disabled.")
 }
 
-export const redis = new Redis({
-  url: process.env.UPSTASH_REDIS_REST_URL,
-  token: process.env.UPSTASH_REDIS_REST_TOKEN,
-})
+export const redis =
+  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+    ? new Redis({
+        url: process.env.UPSTASH_REDIS_REST_URL,
+        token: process.env.UPSTASH_REDIS_REST_TOKEN,
+      })
+    : null
 
-export const cacheMiddleware: Prisma.Middleware = async (params, next) => {
-  const isMutation = !['findUnique', 'findFirst', 'findMany'].includes(params.action);
-  
-  if (isMutation) {
+// Cache utility functions to replace middleware functionality
+export const cacheUtils = {
+  // Generate cache key for database operations
+  generateKey: (model: string, action: string, args: unknown) => {
+    return `${model}:${action}:${JSON.stringify(args)}`
+  },
+
+  // Get cached result
+  get: async (key: string) => {
+    if (!redis) return null
     try {
-      const result = await next(params);
-      await Promise.all((await redis.keys(`${params.model}:*`)).map(key => redis.del(key)));
-      return result;
-    } catch {
-      return next(params);
+      const cached = await redis.get(key)
+      return cached ? JSON.parse(cached as string) : null
+    } catch (error) {
+      console.error("Cache get error:", error)
+      return null
     }
-  }
+  },
 
-  if (params.action === 'findMany' && !params.args.where || params.args?.include?.author?.include?.author) {
-    return next(params);
-  }
-
-  const key = `${params.model}:${params.action}:${JSON.stringify(params.args)}`;
-  
-  try {
-    const cached = await redis.get(key);
-    if (cached) return JSON.parse(cached as string);
-
-    const result = await next(params);
-    if (result) {
-      await redis.set(key, JSON.stringify(result), { 
-        ex: params.action === 'findUnique' ? 3600 : 1800 
-      });
+  // Set cache with TTL
+  set: async (key: string, data: unknown, ttlSeconds = 1800) => {
+    if (!redis) return
+    try {
+      await redis.set(key, JSON.stringify(data), { ex: ttlSeconds })
+    } catch (error) {
+      console.error("Cache set error:", error)
     }
-    return result;
-  } catch {
-    return next(params);
-  }
-};
+  },
+
+  // Clear cache by pattern
+  clearByModel: async (model: string) => {
+    if (!redis) return
+    try {
+      const keys = await redis.keys(`${model}:*`)
+      if (keys.length > 0) {
+        await Promise.all(keys.map((key) => redis.del(key)))
+      }
+    } catch (error) {
+      console.error("Cache clear error:", error)
+    }
+  },
+
+  // Clear specific cache key
+  clear: async (key: string) => {
+    if (!redis) return
+    try {
+      await redis.del(key)
+    } catch (error) {
+      console.error("Cache clear error:", error)
+    }
+  },
+}
+
+// Helper function to check if Redis is available
+export const hasRedis = !!(process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN)
