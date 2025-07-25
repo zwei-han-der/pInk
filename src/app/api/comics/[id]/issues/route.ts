@@ -1,4 +1,4 @@
-import { prisma } from '@/lib/db';
+import prisma from '@/lib/db';
 import { createSuccessResponse, createErrorResponse, createOptionsResponse } from '@/lib/api-utils';
 
 export async function OPTIONS() {
