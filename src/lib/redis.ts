@@ -1,8 +1,6 @@
 import { Redis } from "@upstash/redis"
 
 if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
-  // Do not throw error in the file, check for redis availability in the files that use it
-  // throw new Error('Redis credentials not found in environment variables')
   console.warn("Redis credentials not found in environment variables. Caching will be disabled.")
 }
 
@@ -14,14 +12,11 @@ export const redis =
       })
     : null
 
-// Cache utility functions to replace middleware functionality
 export const cacheUtils = {
-  // Generate cache key for database operations
   generateKey: (model: string, action: string, args: unknown) => {
     return `${model}:${action}:${JSON.stringify(args)}`
   },
 
-  // Get cached result
   get: async (key: string) => {
     if (!redis) return null
     try {
@@ -33,7 +28,6 @@ export const cacheUtils = {
     }
   },
 
-  // Set cache with TTL
   set: async (key: string, data: unknown, ttlSeconds = 1800) => {
     if (!redis) return
     try {
@@ -43,7 +37,6 @@ export const cacheUtils = {
     }
   },
 
-  // Clear cache by pattern
   clearByModel: async (model: string) => {
     if (!redis) return
     try {
@@ -56,7 +49,6 @@ export const cacheUtils = {
     }
   },
 
-  // Clear specific cache key
   clear: async (key: string) => {
     if (!redis) return
     try {
@@ -67,5 +59,4 @@ export const cacheUtils = {
   },
 }
 
-// Helper function to check if Redis is available
 export const hasRedis = !!(process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN)
