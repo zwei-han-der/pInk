@@ -150,7 +150,7 @@ function openModal(issue) {
                     <p><strong>Série:</strong> ${issue.series || 'N/A'}</p>
                     <p><strong>Gênero(s):</strong> ${issue.genres || 'N/A'}</p>
                     <p><strong>Lançamento:</strong> ${issue.year || 'N/A'}</p>
-                    <strong>Tamanho:</strong> ${issue.size || 'N/A'}
+                    <p><strong>Tamanho:</strong> ${issue.size || 'N/A'}</p>
                     <p><strong>Idioma:</strong> ${idiomName}</p>
                 </div>
             </div>
