@@ -538,7 +538,7 @@ a {
     }
     
     .cards {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: 1fr;
         gap: 0.8rem;
     }
     
@@ -808,7 +808,7 @@ a {
     .card {
         padding: 0.5rem;
         border-radius: 10px;
-        max-width: 100%;
+        max-width: 90%;
     }
     
     .card img {
