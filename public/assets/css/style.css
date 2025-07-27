@@ -681,6 +681,7 @@ header h1 {
     }
     
     header h1 {
+        align-items: baseline;
         font-size: 2rem;
         text-align: left;
         font-family: var(--font2);
@@ -702,7 +703,7 @@ header h1 {
     
     #search {
         max-width: 300px;
-        padding: var(--spacing-lg);
+        padding: var(--spacing-xl);
         border-radius: var(--border-radius-lg);
         font-size: 1rem;
     }
